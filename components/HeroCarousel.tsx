@@ -17,14 +17,14 @@ const HeroCarousel = () => {
     <div className='bg-slate-50 rounded-3xl relative shadow-xl'>
       <Carousel
         showThumbs={false}
-        autoPlay
+        // autoPlay
+        // interval={2000}
         infiniteLoop
-        interval={2000}
         showArrows={false}
         showStatus={false}
       >
         {heroImage?.map((image)=>(
-        <div>
+        <div key={image.alt}>
             <Image 
               src={image.imgUrl}
               width={484}
